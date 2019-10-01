@@ -1,0 +1,25 @@
+<div class="content">
+    <h3>{{article?.title}}</h3>
+    <img src="{{article?.imagePreviewUrl}}" />
+    <p>{{article?.text}}</p>
+    <hr>
+    <h4>Комментарии:</h4>
+    <div>
+        <ul *ngFor="let comment of comments">
+            <div *ngIf="comment">
+                <li>
+                    <button class="button-delete" (click)="deleteComment(comment)">
+                        <div class="delete-icon"></div>
+                    </button>
+                    <h5>{{comment.userName}}</h5>
+                    <p>{{comment.comment}}</p>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <form #form="ngForm" class="form-group" (ngSubmit)="onSubmitForm(form)">
+        <label>Ваш комментарий:</label>
+        <input class="form-control" name="commentText" [(ngModel)]="commentText" required />
+        <button class="btn btn-primary" (click)="addComment(commentText)">Добавить комментарий</button>
+    </form>
+</div>

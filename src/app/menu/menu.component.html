@@ -1,0 +1,30 @@
+<div class="search">
+    <form #form="ngForm" (ngSubmit)="onSubmitForm(form)">
+        <div class="search-block">
+            <input type="text" class="form-control" name="searchText" [(ngModel)]="searchText" />
+        </div>
+        <div class="search-block">
+            <a href="/articles/search/{{searchText}}" class="search-link" >
+                <div class="search-icon"></div>
+            </a>
+        </div>
+    </form>
+</div>
+
+<div class="profile">
+    <button (click)="loginToSelfcare()">
+        <div class="profile-icon"></div>
+    </button>
+</div>
+
+<div class="menu">
+    <button (click)="toggleMenu()">
+        <div class="menu-icon"></div>
+    </button>
+    <ul class="dropdown-menu show" *ngIf="isMenuOpen">
+        <li><a href="/" (click)="toggleMenu()">Главная</a></li>
+        <li><a href="/attractions" (click)="toggleMenu()">Достопремичательности</a></li>
+        <li><a href="/art" (click)="toggleMenu()">Искусство</a></li>
+        <li><a href="/entertainments" (click)="toggleMenu()">Развлечения</a></li>
+    </ul>
+</div>

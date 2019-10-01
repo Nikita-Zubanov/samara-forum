@@ -1,0 +1,30 @@
+.content {
+    padding: 0px 180px 30px 180px;
+}
+
+.title {    
+    padding-bottom: 60px;
+}
+h2 {
+    float: left;
+}
+.question-button {
+    float: right;
+    display: block;
+
+    padding-top: 10px;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+}
+.question-icon {
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../../images/question-icon.png");
+}
+.help {
+    padding-bottom: 30px;
+}

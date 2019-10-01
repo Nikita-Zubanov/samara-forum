@@ -1,0 +1,22 @@
+<div class="content">
+    <h2>{{title}}</h2>
+    <ul>
+        <div *ngFor="let article of articlesOnCurrentPage">
+            <li *ngIf="article != null">
+                <h3>{{article?.title}}</h3>
+                <img src="{{article?.imagePreviewUrl}}" />
+                <p>{{article?.text | LimitTo}}</p>
+                <a class="link-article" href="/article/{{article?.category}}/{{article?.title}}">Читать далее...</a>
+            </li>
+        </div>
+    </ul>
+    <table>
+        <td *ngFor="let article of articlesOnAllPages; let x = index">
+            <div *ngIf="isMoreOnePage()">
+                <a class="link-pages" href="{{categoryName}}/{{x}}" *ngIf="!isCurrentPage(x)" (click)="goToPage()">{{x + 1}}</a>
+                <a class="link-pages current-link-page" href="{{categoryName}}/{{x}}" *ngIf="isCurrentPage(x)"
+                    (click)="goToPage()">{{x + 1}}</a>
+            </div>
+        </td>
+    </table>
+</div>

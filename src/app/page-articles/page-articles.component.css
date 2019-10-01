@@ -1,0 +1,38 @@
+.content {
+    padding: 0px 180px 30px 180px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2, h3 {
+    text-align: center;
+    letter-spacing: 2px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    margin: 10px;
+
+    text-decoration: none;
+    outline: none;
+    display: block;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #000000 ;
+    transition: .3s linear;
+}
+a:hover {
+    color: #b99d61;
+}
+.current-link-page {
+    font-size: 120%;
+}

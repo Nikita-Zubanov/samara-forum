@@ -1,0 +1,12 @@
+<div class="content">
+    <h4>Личный кабинет</h4>
+    
+    <strong>Ваш логин:</strong> {{currentUser.username}}<br />
+    <strong>Данные о себе: </strong>
+    <div class="user-data">
+        <p>Имя: {{currentUser.firstName}}</p>
+        <p>Фамилия: {{currentUser.lastName}}</p>
+        <p>Статус: {{currentUser.role}}</p>
+    </div>
+    <button class="btn btn-primary" (click)="logout()">Выйти</button>
+</div>
